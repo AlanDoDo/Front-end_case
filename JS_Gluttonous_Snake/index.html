@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Alan</title>
+  <style>
+    body {
+      background: #f6f6f6;
+    }
+
+    .game {
+      width: 1000px;
+      height: 800px;
+      margin: 10px auto;
+    }
+
+    .header {
+      height: 100px;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0 20px;
+    }
+
+    .header button {
+      width: 100px;
+      height: 60px;
+      color: #fff;
+    }
+
+    .header .start {
+      background: linear-gradient(to right, red, rgb(226, 16, 128));
+    }
+
+    .header .start:active {
+      background: linear-gradient(to right, rgb(6, 244, 93), rgb(11, 239, 167));
+      color: red;
+    }
+
+    .header .pause {
+      background: linear-gradient(to right, rgb(159, 224, 19), rgb(120, 243, 6));
+    }
+
+    .header .pause:active {
+      background: linear-gradient(to right, rgb(6, 244, 93), rgb(11, 239, 167));
+      color: red;
+    }
+
+    .line {
+      width: 800px;
+      height: 600px;
+      position: relative;
+      margin: 20px auto;
+    }
+
+    .map {
+      width: 800px;
+      height: 600px;
+    }
+
+    h2 span {
+      color: red;
+    }
+
+    .cube {
+      width: 20px;
+      height: 20px;
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 游戏画面 -->
+  <div class="game">
+    <!-- 功能按钮 -->
+    <div class="header">
+      <button class="start">重新开始</button>
+      <button class="pause">暂停游戏</button>
+      <h2>W上 A左 S下 D右 当前分数: <span class="score"> 0 </span> </h2>
+    </div>
+    <!-- 贪吃蛇地图 -->
+    <div class="line">
+      <div class="map"></div>
+    </div>
+  </div>
+
+  <script src="./line.js"></script>
+  <script src="./index.js"></script>
+</body>
+
+</html>
