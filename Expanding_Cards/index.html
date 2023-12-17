@@ -1,0 +1,118 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expanding Cards</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Muli', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            width: 90vw;
+        }
+
+        .panel {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 80vh;
+            border-radius: 50px;
+            color: #fff;
+            cursor: pointer;
+            flex: 0.5;
+            margin: 10px;
+            position: relative;
+            transition: all 700ms ease-in;
+        }
+
+        .panel h3 {
+            font-size: 24px;
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            margin: 0;
+            opacity: 0;
+        }
+
+        .panel.active {
+            flex: 5;
+        }
+
+        .panel.active h3 {
+            opacity: 1;
+            transition: opacity 0.3s ease-in 0.4s;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                width: 100vw;
+            }
+
+            .panel:nth-of-type(4),
+            .panel:nth-of-type(5) {
+                display: none;
+            }
+        }
+    </style>
+    <script>
+        window.onload = function(){
+            const panels = document.querySelectorAll('.panel')
+                panels.forEach(panel => {
+                    panel.addEventListener('click', () => {
+                        removeActiveClasses()
+                        panel.classList.add('active')
+                    })
+                })
+
+            function removeActiveClasses() {
+                panels.forEach(panel => {
+                    panel.classList.remove('active')
+                })
+            }    
+        }
+        
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="panel active"
+            style="background-image: url('https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a13.jpg')">
+            <h3>Explore The World</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a14.jpg')">
+            <h3>Wild Forest</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a18.jpg')">
+            <h3>Sunny Beach</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a3.jpg')">
+            <h3>City on Winter</h3>
+        </div>
+        <div class="panel"
+            style="background-image: url('https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/img/a27.jpg')">
+            <h3>Mountains - Clouds</h3>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
