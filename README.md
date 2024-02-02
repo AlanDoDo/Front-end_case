@@ -3,6 +3,10 @@
 
 本仓库旨在为初学者提供一系列小项目，帮助大家学习和练习JavaScript和CSS。这些小项目涵盖了各种不同的主题和难度级别，并且会持续更新以添加更多新的项目。
 
+![](https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x285.jpg)
+
+![](https://alandodo-1315761622.cos.ap-beijing.myqcloud.com/blog/x286.jpg)
+
 ## 为什么选择这些小项目？
 
 - 学习实践：通过完成这些小项目，你将有机会实践所学的JavaScript和CSS知识，加深对它们的理解。
